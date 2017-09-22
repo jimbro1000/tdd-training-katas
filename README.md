@@ -1,4 +1,5 @@
 # TDD Training Katas
+
 ## What is this?
 This repository contains TDD kata exercises as requirements and guidance on
 how to get started with each.
@@ -36,7 +37,7 @@ are needed to avoid having to create two solutions.
 
 ## Lessons on TDD, Syllabus
 * [TDD 101 - how to write a unit test](./Documentation/TDD101.md)
-* The TDD cycle - red, green, red-green-refactor
+* The TDD cycle - red, green, refactor
 * Code coverage - why it matters, how it doesn't
 * The art of letting go
 * Repetition

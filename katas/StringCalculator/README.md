@@ -1,5 +1,7 @@
 # String Calculator
 
+## Grade - Beginner
+
 ## Introduction
 The string calculator is a simple tool to calculate the sum of a sequence of
 numbers presented as a string.
