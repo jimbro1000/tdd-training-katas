@@ -12,7 +12,7 @@ a single, correct solution for solving the problem presented in the requirements
 
 ## Contents
 * [String Calculator](./katas/StringCalculator/README.md)
-* Parking Bill
+* [Parking Bill](./katas/ParkingBill/README.md)
 * Phone Bill
 * When to Travel
 * Travel Time Service
