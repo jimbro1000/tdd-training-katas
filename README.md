@@ -10,7 +10,7 @@ While there are correct results for the supplied tests, there is not necessarily
 a single, correct solution for solving the problem presented in the requirements.
 
 ## Contents
-* String Calculator
+* [String Calculator](./katas/StringCalculator/README.md)
 * Parking Bill
 * Phone Bill
 * When to Travel
