@@ -38,6 +38,13 @@ of locations in alphabetical order:
 TravelTimeCalculator.getTravelLocations()
 ```
 
+A list of possible destinations for a given location can be obtained by using a
+method "getTravelDestinations". This method accepts the queried location as a
+string. The output is a comma-separated list of destination locations:
+```
+TravelTimeCalculator.getTravelDestinations(location)
+```
+
 The calculator also has a method to update the travel time based on history
 "setTravelTime" that accepts two string values for locations and a third string
 value holding the travel time in the format "hh:mm":
