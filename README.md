@@ -13,9 +13,10 @@ a single, correct solution for solving the problem presented in the requirements
 ## Contents
 * [String Calculator](./katas/StringCalculator/README.md)
 * [Parking Bill](./katas/ParkingBill/README.md)
+* [Rune Finder](./katas/RuneFinder/README.md)
 * [Phone Bill](./katas/PhoneBill/README.md)
-* When to Travel
-* Travel Time Service
+* [Travel Time Service](./katas/TravelTimeCalculator/README.md)
+* [When to Travel](./katas/WhenToTravel/README.md)
 
 ## Overall objectives
 The katas are intended to be completed within a limited period (one to two
