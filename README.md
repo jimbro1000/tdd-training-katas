@@ -38,7 +38,7 @@ are needed to avoid having to create two solutions.
 
 ## Lessons on TDD, Syllabus
 * [TDD 101 - how to write a unit test](./Documentation/TDD101.md)
-* The TDD cycle - red, green, refactor
+* [The TDD cycle - red, green, refactor](./Documentation/TheTDDCycle.md)
 * Code coverage - why it matters, how it doesn't
 * The art of letting go
 * Repetition
