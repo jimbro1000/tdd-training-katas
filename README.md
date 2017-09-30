@@ -15,6 +15,7 @@ a single, correct solution for solving the problem presented in the requirements
 * [Parking Bill](./katas/ParkingBill/README.md)
 * [Rune Finder](./katas/RuneFinder/README.md)
 * [Phone Bill](./katas/PhoneBill/README.md)
+* [Disc Intersections](./katas/DiscIntersections/README.md)
 * [Travel Time Service](./katas/TravelTimeCalculator/README.md)
 * [When to Travel](./katas/WhenToTravel/README.md)
 
