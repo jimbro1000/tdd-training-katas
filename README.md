@@ -39,7 +39,7 @@ are needed to avoid having to create two solutions.
 ## Lessons on TDD, Syllabus
 * [TDD 101 - how to write a unit test](./Documentation/TDD101.md)
 * [The TDD cycle - red, green, refactor](./Documentation/TheTDDCycle.md)
-* Code coverage - why it matters, how it doesn't
+* [Code coverage - why it matters, how it doesn't](./Documentation/CodeCoverage.md)
 * The art of letting go
 * Repetition
 * Why agile and TDD fit
