@@ -11,6 +11,7 @@ While there are correct results for the supplied tests, there is not necessarily
 a single, correct solution for solving the problem presented in the requirements.
 
 ## Contents
+* [Fizz Buzz](./katas/FizzBuzz/README.md)
 * [String Calculator](./katas/StringCalculator/README.md)
 * [Parking Bill](./katas/ParkingBill/README.md)
 * [Rune Finder](./katas/RuneFinder/README.md)
