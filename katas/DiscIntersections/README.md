@@ -1,6 +1,6 @@
 # Disc Intersections
 
-## Grade - Intermediate
+## Grade - Intermediate/Advanced
 
 ## Introduction
 This kata requires an answer to a fairly simple problem - given an array of
@@ -19,7 +19,8 @@ the developer to step away from pure unit-tests and look at how to capture the
 performance of the tests in the form of micro-benchmarks.
 
 The simplest answer here is to just record the run-time of each test and compare
-this against the number of elements in the input. Tools exist to support micro-benchmarking and recording of performance but how does this get included
+this against the number of elements in the input. Tools exist to support
+micro-benchmarking and recording of performance but how does this get included
 in the build automation?
 
 ## Requirements
@@ -41,7 +42,7 @@ in the build automation?
   intersection between a point and the edge of a circle is included in the sum.
   A point  wholly contained in a circle is included in the sum.
 
-  6. The time to find the solution should, at worst case, be in the order of
+  6. (BONUS) The time to find the solution should, at worst case, be in the order of
   N\*log(N) where N is the number of elements in the array. NB.: time complexity
   is normally stated as being a function `O()` so in this case it is O(N\*log(N)).
 
