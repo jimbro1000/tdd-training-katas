@@ -28,6 +28,12 @@ hours) and for repetition. On each repeat of a kata the solution should be a
 clean sheet. It is the process that is important, not the solution but some
 variety is needed to maintain interest.
 
+A corner stone of the katas are that through repetition the katas become
+memorized and can be repeated without the need for the requirements document.
+Working through the kata in a managed session is only part of the story, it is
+important to practice each kata over and over. Repeating a single kata is vital,
+moving on to another kata must be a carefully considered move. 
+
 The language used to solve a kata is not prescribed, it is up to the student to
 decide the best choice, it is however easier to run if all students in the room
 are using the same language so that work can be shared.
