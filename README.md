@@ -32,7 +32,7 @@ A corner stone of the katas are that through repetition the katas become
 memorized and can be repeated without the need for the requirements document.
 Working through the kata in a managed session is only part of the story, it is
 important to practice each kata over and over. Repeating a single kata is vital,
-moving on to another kata must be a carefully considered move. 
+moving on to another kata must be a carefully considered move.
 
 The language used to solve a kata is not prescribed, it is up to the student to
 decide the best choice, it is however easier to run if all students in the room
@@ -50,7 +50,7 @@ are needed to avoid having to create two solutions.
 * [TDD 101 - how to write a unit test](./Documentation/TDD101.md)
 * [The TDD cycle - red, green, refactor](./Documentation/TheTDDCycle.md)
 * [Code coverage - why it matters, how it doesn't](./Documentation/CodeCoverage.md)
-* The art of letting go
+* [The art of letting go](./Documentation/LettingGo.md)
 * Repetition
 * Why agile and TDD fit
 * Test sizes - the testing pyramid
