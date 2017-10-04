@@ -9,7 +9,7 @@ output to the console.
 
 ## Requirements
 
-1. Output a list of numbers from 1 to 100 to the console
+1. Return a list of numbers from 1 to 100 as a comma separated string
 
 2. For each multiple of 3 output "Fizz" instead of the number
 
