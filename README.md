@@ -51,7 +51,7 @@ are needed to avoid having to create two solutions.
 * [The TDD cycle - red, green, refactor](./Documentation/TheTDDCycle.md)
 * [Code coverage - why it matters, how it doesn't](./Documentation/CodeCoverage.md)
 * [The art of letting go](./Documentation/LettingGo.md)
-* Repetition
+* [Repetition](./Documentation/Repetition.md)
 * Why agile and TDD fit
 * Test sizes - the testing pyramid
 * Why this isn't the end
