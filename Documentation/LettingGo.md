@@ -2,7 +2,9 @@
 
 One of the issues in development of code is that it gets messy, refactoring of
 code results in blocks commented out, the code itself becomes idiosyncratic to
-the individual working on it or just plain unreadable.
+the individual working on it or just plain unreadable. None of this is an
+intentional outcome, it is a side-effect of trying to hold-on to the previous
+code implementation.
 
 ## What Are We Holding On To
 
@@ -20,6 +22,9 @@ to the work is hard not to do, especially if it has been a struggle but the
 vital thing is to accept that it is the outcome we are working towards, not a
 set of lines of code.
 
+Sometimes code becomes a way of keeping-score too. Individual developers
+showing off just how great their implementation is.
+
 ## Why Holding On Is Bad
 
 The code needs to be simple, following our TDD tenets it should be just enough
@@ -30,7 +35,7 @@ that changes do not create new problems.
 We have tools in place, code control, that allow us to make changes and revert
 them should something go wrong and powerful refactoring tools built into our
 IDEs. There is no practical reason to hold on to old code or leave code in an
-unreadable state or unusable state.
+unreadable or unusable state.
 
 ## So What Is Clean Code?
 
