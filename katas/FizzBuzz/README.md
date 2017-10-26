@@ -1,14 +1,14 @@
-# Fizz Buzz
+# Fizz Buzz #
 
-## Grade - Total Beginner
+## Grade - Total Beginner ##
 
-## Introduction
+## Introduction ##
 
 Fizz Buzz is an ideal, simple introduction to TDD with the emphasis on the
 process rather than the implementation. There is no input to process, just an
 output to the console.
 
-## Requirements
+## Requirements ##
 
 1. Return a list of numbers from 1 to 100 as a comma separated string
 
@@ -18,17 +18,19 @@ output to the console.
 
 4. For multiples of 3 and 5 output "Fizzbuzz" instead of the number
 
-## Guidance
+## Guidance ##
 
-### Getting Started
+### Getting Started ###
 
 The first step is to make sure you have the tools you need. If you are using
 Java then an ideal starting point is a Maven POM file with a dependency added
 for junit. If Javascript is the weapon of choice then a node project with
 mocha. In all cases creating a git repository is a must. Equally useful is a
-modern IDE with static code analysis and code completion.
+modern IDE with static code analysis and code completion. The walkthrough here
+assumes a straightforward approach to design and accepting the requirements
+as-is.
 
-### First Test
+### First Test ###
 The first requirement can be tested easily - there is no input just a single
 string output. Treating the requirements separately and ignoring subsequent
 requirements all this is needs is an assertion that the output is equal to a
@@ -137,3 +139,60 @@ Running the tests again results in the test passing.
 
 The final step of the cycle is refactoring. There isn't an awful lot to do,
 just the matter of moving the output string to a constant (if it isn't already).
+
+### A Better Way ###
+
+If we work on a blind assumption that the requirements are final and cannot be
+broken down the end result can be hard to test as shown in the previous example.
+This is largely unavoidable for black box testing but TDD is about white box
+testing. The alternative is to review the requirements and spend some time
+designing the structure of the implementation and what the internal components
+need to be.
+
+### A Better Fizzbuzz ###
+
+Putting the requirements together and examining what the solution needs to do
+shows a need to test numeric input and convert multiples of 3, 5 and 15 into
+"fizz", "buzz" and "fizzbuzz". This functionality forms the core of the
+requirements and forms a strong candidate for an internal function. The
+remainder of the requirement is to compile the numbers 1 to 100 in a string of
+comma-separated values, with the translation applied to each number.
+
+Looking at the two parts we have a need for a function that accepts a number
+and returns a string. The check for 3, 5 or 15 multiples is applied and results
+in a translation of the numeric input to fizz, buzz or fizzbuzz. Any other
+numbers are turned into the direct string equivalent (i.e. 2 becomes "2").
+
+The other part of the requirements can be broken down into a slightly different
+view. The solution will return a list of 100 elements of either numbers or the
+words "Fizz", "Buzz" or "Fizzbuzz". Numbers will always be in ascending order.
+Numbers that are multiples of 3, 5 or 15 will be removed and substituted.
+
+Expressing these as clear requirements:
+
+  1. The solution will return a string
+  2. The returned value will be a comma-separated list of 100 values
+  3. The values will be either numeric or the values "Fizz", "Buzz" and
+  "Fizzbuzz"
+  4. The numeric values will be in consecutive, ascending order
+  5. The numeric values will start at 1
+  6. Any value that would be a multiple of 3 or 5 the numeric value is instead
+  a word
+  7. Multiples of 15 are replaced with "Fizzbuzz"
+  8. Multiples of 5 are replaced with "Buzz"
+  9. Multiples of 3 are replaced with "Fizz"
+  10. The solution will contain a function "transform"
+  11. Transform will accept a numeric value
+  12. Transform will return a string
+  13. When transform receives a multiple of 15 the result is "Fizzbuzz"
+  14. When transform receives a multiple of 5 but not 3 the result is "Buzz"
+  15. When transform receives a multiple of 3 but not 5 the result is "Fizz"
+  16. All other inputs to transform result in the direct string equivalent of
+  the numeric input
+
+Even now the temptation is to jump in and start building tests starting with #1
+but the better option is to look at building the transform function first.
+Taking this approach allows for a clearer way of constructing the tests and
+code. The end result (in code) is very similar and applying any black box tests
+to the implementation will (or should) show that the externally visible
+behaviour remains the same.
