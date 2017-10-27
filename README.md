@@ -53,5 +53,5 @@ are needed to avoid having to create two solutions.
 * [The art of letting go](./Documentation/LettingGo.md)
 * [Repetition](./Documentation/Repetition.md)
 * [Why agile and TDD fit](./Documentation/agileTDD.md)
-* Test sizes - the testing pyramid
+* [Test sizes - the testing pyramid](./Documentation/TestSizes.md)
 * Why this isn't the end
