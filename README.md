@@ -52,6 +52,6 @@ are needed to avoid having to create two solutions.
 * [Code coverage - why it matters, how it doesn't](./Documentation/CodeCoverage.md)
 * [The art of letting go](./Documentation/LettingGo.md)
 * [Repetition](./Documentation/Repetition.md)
-* Why agile and TDD fit
+* [Why agile and TDD fit](./Documentation/agileTDD.md)
 * Test sizes - the testing pyramid
 * Why this isn't the end
