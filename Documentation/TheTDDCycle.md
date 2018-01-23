@@ -271,7 +271,7 @@ package - better still the developer will have placed the test code into a
 different folder structure that allows the IDE to distinguish test code from
 implementation code. When it comes to compiling and packaging the code the tests
 are not included, only the implementation code should be in the finished
-artifact. This is not unique to Java, this approach should be consistent in any
+artefact. This is not unique to Java, this approach should be consistent in any
 development, not just for TDD - it is simply good practice.
 
 The second point is keeping the class and method naming clear and relevant.
