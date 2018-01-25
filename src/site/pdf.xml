@@ -1,0 +1,29 @@
+<document xmlns="http://maven.apache.org/DOCUMENT/1.0.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/DOCUMENT/1.0.1
+          http://maven.apache.org/xsd/document-1.0.1.xsd"
+          outputName="tdd-katas-${project.version}">
+    <meta>
+        <title>DWP Digital Engineering Coding Standards</title>
+        <author>Julian Brown</author>
+    </meta>
+    <toc depth="1" name="Table of Contents">
+        <item name="Introduction" ref="src/site/README.md"/>
+        <item name="TDD 101" ref="/src/site/Documentation/TDD101.md"/>
+        <item name="The TDD Cycle" ref="/src/site/Documentation/TheTDDCycle.md"/>
+        <item name="Code Coverage" ref="/src/site/Documentation/CodeCoverage.md"/>
+        <item name="The Art of Letting Go" ref="/src/site/Documentation/LettingGo.md"/>
+        <item name="Repetition" ref="/src/site/Documentation/Repetition.md"/>
+        <item name="Test Sizes" ref="/src/site/Documentation/TestSizes.md"/>
+        <item name="Test Driven Design" ref="/src/site/Documentation/AdvancedTDD.md"/>
+    </toc>
+    <cover>
+        <coverTitle>Engineering Coding Standards</coverTitle>
+        <coverSubTitle>Version: ${project.version}</coverSubTitle>
+        <coverType>Training Guide</coverType>
+        <projectName>${project.name}</projectName>
+        <companyName>Department for Work and Pensions</companyName>
+        <companyLogo>${project.basedir}/src/site/resources/dwpLogo.png</companyLogo>
+    </cover>
+</document>
+
