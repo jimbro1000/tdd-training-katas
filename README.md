@@ -11,16 +11,16 @@ While there are correct results for the supplied tests, there is not necessarily
 a single, correct solution for solving the problem presented in the requirements.
 
 ## Contents
-* [Fizz Buzz](./katas/FizzBuzz/README.md)
-* [String Calculator](./katas/StringCalculator/README.md)
-* [Parking Bill](./katas/ParkingBill/README.md)
-* [Rune Finder](./katas/RuneFinder/README.md)
-* [Phone Bill](./katas/PhoneBill/README.md)
-* [Ten Pin Bowling](./katas/TenPinBowling/README.md)
-* [Ten Pin Bowling Part 2](./katas/TenPinBowlingPartTwo/README.md)
-* [Disc Intersections](./katas/DiscIntersections/README.md)
-* [Travel Time Service](./katas/TravelTimeCalculator/README.md)
-* [When to Travel](./katas/WhenToTravel/README.md)
+* [Fizz Buzz](./src/site/markdown/katas/FizzBuzz/README.md)
+* [String Calculator](./src/site/markdown/katas/StringCalculator/README.md)
+* [Parking Bill](./src/site/markdown/katas/ParkingBill/README.md)
+* [Rune Finder](./src/site/markdown/katas/RuneFinder/README.md)
+* [Phone Bill](./src/site/markdown/katas/PhoneBill/README.md)
+* [Ten Pin Bowling](./src/site/markdown/katas/TenPinBowling/README.md)
+* [Ten Pin Bowling Part 2](./src/site/markdown/katas/TenPinBowlingPartTwo/README.md)
+* [Disc Intersections](./src/site/markdown/katas/DiscIntersections/README.md)
+* [Travel Time Service](./src/site/markdown/katas/TravelTimeCalculator/README.md)
+* [When to Travel](./src/site/markdown/katas/WhenToTravel/README.md)
 
 ## Overall objectives
 The katas are intended to be completed within a limited period (one to two
@@ -47,11 +47,11 @@ introducing mocks and spies - where this is necessary, supporting tools and code
 are needed to avoid having to create two solutions.
 
 ## Lessons on TDD, Syllabus
-* [TDD 101 - how to write a unit test](./Documentation/TDD101.md)
-* [The TDD cycle - red, green, refactor](./Documentation/TheTDDCycle.md)
-* [Code coverage - why it matters, how it doesn't](./Documentation/CodeCoverage.md)
-* [The art of letting go](./Documentation/LettingGo.md)
-* [Repetition](./Documentation/Repetition.md)
-* [Why agile and TDD fit](./Documentation/agileTDD.md)
-* [Test sizes - the testing pyramid](./Documentation/TestSizes.md)
-* [Why this isn't the end](./Documentation/AdvancedTDD.md)
+* [TDD 101 - how to write a unit test](./src/site/markdown/Documentation/TDD101.md)
+* [The TDD cycle - red, green, refactor](./src/site/markdown/Documentation/TheTDDCycle.md)
+* [Code coverage - why it matters, how it doesn't](./src/site/markdown/Documentation/CodeCoverage.md)
+* [The art of letting go](./src/site/markdown/Documentation/LettingGo.md)
+* [Repetition](./src/site/markdown/Documentation/Repetition.md)
+* [Why agile and TDD fit](./src/site/markdown/Documentation/agileTDD.md)
+* [Test sizes - the testing pyramid](./src/site/markdown/Documentation/TestSizes.md)
+* [Why this isn't the end](./src/site/markdown/Documentation/AdvancedTDD.md)
