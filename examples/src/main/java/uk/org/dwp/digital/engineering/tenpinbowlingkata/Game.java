@@ -16,6 +16,14 @@ public class Game {
     }
 
     public int score() {
-        return INCOMPLETE_GAME_SCORE;
+        int final_score = INCOMPLETE_GAME_SCORE;
+        if (rollResult.size() > 0) {
+            int cumulative_score = 0;
+            for (Integer pins : rollResult) {
+                cumulative_score += pins;
+            }
+            final_score = cumulative_score;
+        }
+        return final_score;
     }
 }
