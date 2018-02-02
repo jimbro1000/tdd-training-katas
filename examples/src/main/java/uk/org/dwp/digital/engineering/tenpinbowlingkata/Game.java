@@ -8,7 +8,7 @@ public class Game {
     List<Integer> rollResult = new ArrayList<>();
 
     public void roll(int pins) {
-        if (pins >= MINIMUM_PINS) {
+        if (pins >= MINIMUM_PINS && pins <= 10) {
             rollResult.add(pins);
         }
     }
