@@ -15,23 +15,27 @@ end of a frame the pins available to knock down is reset to 10.
 Scoring is maintained on a score card that tracks the result of each roll of the 
 bowling ball, and the total score achieved.
 
-| score card | | | | | | | | | | |
-| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| frame      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-| score      | 1 4 | 4 5 | 6 / | 5 / | X | 0 1 | 7 / | 6 / | X | 2 / 6 |
-|            | 5 | 14 | 29 | 49 | 60 | 61 | 77 | 97 | 117 | 133 |
+| score card |     |     |     |     |     |     |     |     |     |       |
+| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- |
+| frame      |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10    |
+| score      | 1 4 | 4 5 | 6 / | 5 / | X   | 0 1 | 7 / | 6 / | X   | 2 / 6 |
+|            | 5   | 14  | 29  | 49  | 60  | 61  | 77  | 97  | 117 | 133   |
 
 A spare is when the player knocks down all 10 pins in two tries. The bonus for
 that frame is the number of pins knocked down by the next roll. So in frame 3
 above, the score is 10 (the total number knocked down) plus a bonus of 5 (the
 number of pins knocked down on the next roll.)
 
-A strike is when the player knocks down all 10 pins on his first try. The bonus
-for that frame is the value of the next two balls rolled.
+A strike is given when the player knocks down all 10 pins on his first try. The 
+bonus for that frame is the value of the next two balls rolled in the following 
+frame. An example of this is shown in frame 5, here the score for frame 5 is 10
+plus 1 from the next two rolls in frame 6.
 
 In the tenth frame a player who rolls a spare or strike is allowed to roll the
-extra balls to complete the frame.  However no more than three balls can be
-rolled in tenth frame.
+extra balls to complete the frame. However no more than three balls can be
+rolled for tenth frame. During the tenth frame, for bonus rolls only, if the
+frame has been cleared (all ten pins knocked down) the frame will be reset to
+ten standing pins.
 
 For this kata the objective is to produce a game class that tracks the ongoing
 score of a player and provides a final total score.

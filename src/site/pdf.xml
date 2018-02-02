@@ -24,7 +24,7 @@
         <item name="Kata 6.1 - Ten Pin Bowling Part 1" ref="katas\TenPinBowling\README.md"/>
         <item name="Kata 6.2 - Ten Pin Bowling Part 2" ref="katas\TenPinBowlingPartTwo\README.md"/>
         <item name="Kata 7 - Disc Intersections" ref="katas\DiscIntersections\README.md"/>
-        <item name="Kata 8.1 - Travel Time Service" ref="katas\TravelTimeService\README.md"/>
+        <item name="Kata 8.1 - Travel Time Service" ref="katas\TravelTimeCalculator\README.md"/>
         <item name="Kata 8.2 - When To Travel" ref="katas\WhenToTravel\README.md"/>
     </toc>
     <cover>
