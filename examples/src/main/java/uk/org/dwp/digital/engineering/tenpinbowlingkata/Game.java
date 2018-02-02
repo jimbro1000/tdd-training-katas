@@ -13,4 +13,8 @@ public class Game {
             rollResult.add(pins);
         }
     }
+
+    public int score() {
+        return -1;
+    }
 }

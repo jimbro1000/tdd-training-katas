@@ -43,4 +43,9 @@ public class GameTest {
         Assert.assertThat("Expected roll to ignore the first roll", game.rollResult.size(), is(equalTo(1)));
         Assert.assertThat("Expected roll to store 5 for the second roll", game.rollResult.get(0), is(equalTo(5)));
     }
+
+    @Test
+    public void scoreReturnsNegativeOneIfTheGameIsNotFinished() {
+        Assert.assertThat("Expected a score of -1", game.score(), is(equalTo(-1)));
+    }
 }
