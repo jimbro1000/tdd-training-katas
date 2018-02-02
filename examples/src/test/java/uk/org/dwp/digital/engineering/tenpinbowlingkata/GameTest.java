@@ -104,4 +104,54 @@ public class GameTest {
         game.roll(1);
         Assert.assertThat("Expected a score of 29", game.score(), is(equalTo(29)));
     }
+
+    @Test
+    public void aSpareBallInTheTenthFrameResultsInASingleBonusRoll() {
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(9);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 29", game.score(), is(equalTo(29)));
+    }
+
+    @Test
+    public void aStrikeRollResultsInTheNextTwoRollsBeingAddedBack() {
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 30", game.score(), is(equalTo(30)));
+    }
 }

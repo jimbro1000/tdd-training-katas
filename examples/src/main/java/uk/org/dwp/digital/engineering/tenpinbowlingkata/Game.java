@@ -23,21 +23,38 @@ public class Game {
         int frame = 1;
         int pinsLeftInFrame = PINS_IN_FRAME;
         int cumulative_score = 0;
-        for (int index = 0; index < rollResult.size(); ++index) {
+        boolean gameComplete = false;
+        int index = 0;
+        while (index < rollResult.size() && !gameComplete) {
             int pins = rollResult.get(index);
             if (pinsLeftInFrame < PINS_IN_FRAME) {
                 if (pinsLeftInFrame == pins) {
                     cumulative_score += rollResult.get(index + 1);
+                    if (frame == FRAMES_IN_GAME) {
+                        ++index;
+                    }
                 }
                 framesCompleted = frame;
                 ++frame;
                 pinsLeftInFrame = PINS_IN_FRAME;
             } else {
-                pinsLeftInFrame -= pins;
+                if (PINS_IN_FRAME == pins) {
+                    cumulative_score += rollResult.get(index + 1);
+                    cumulative_score += rollResult.get(index + 2);
+                    framesCompleted = frame;
+                    ++frame;
+                    pinsLeftInFrame = PINS_IN_FRAME;
+                } else {
+                    pinsLeftInFrame -= pins;
+                }
             }
             cumulative_score += pins;
+            if (framesCompleted == FRAMES_IN_GAME) {
+                gameComplete = true;
+            }
+            ++index;
         }
-        if (framesCompleted == FRAMES_IN_GAME) {
+        if (gameComplete && index == rollResult.size()) {
             final_score = cumulative_score;
         }
         return final_score;
