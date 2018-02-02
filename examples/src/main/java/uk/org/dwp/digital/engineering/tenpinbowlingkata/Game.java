@@ -17,11 +17,21 @@ public class Game {
 
     public int score() {
         int final_score = INCOMPLETE_GAME_SCORE;
-        if (rollResult.size() > 0) {
-            int cumulative_score = 0;
-            for (Integer pins : rollResult) {
-                cumulative_score += pins;
+        int framesCompleted = 0;
+        int frame = 1;
+        int pinsLeftInFrame = 10;
+        int cumulative_score = 0;
+        for (Integer pins : rollResult) {
+            if (pinsLeftInFrame < 10) {
+                framesCompleted = frame;
+                ++frame;
+                pinsLeftInFrame = 10;
+            } else {
+                pinsLeftInFrame -= pins;
             }
+            cumulative_score += pins;
+        }
+        if (framesCompleted == 10) {
             final_score = cumulative_score;
         }
         return final_score;
