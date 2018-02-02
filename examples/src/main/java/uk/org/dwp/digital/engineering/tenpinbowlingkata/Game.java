@@ -24,10 +24,11 @@ public class Game {
         int pinsLeftInFrame = PINS_IN_FRAME;
         int cumulative_score = 0;
         boolean gameComplete = false;
+        boolean rollTwoInFrame = false;
         int index = 0;
         while (index < rollResult.size() && !gameComplete) {
             int pins = rollResult.get(index);
-            if (pinsLeftInFrame < PINS_IN_FRAME) {
+            if (rollTwoInFrame) {
                 if (pinsLeftInFrame == pins) {
                     cumulative_score += rollResult.get(index + 1);
                     if (frame == FRAMES_IN_GAME) {
@@ -37,16 +38,20 @@ public class Game {
                 framesCompleted = frame;
                 ++frame;
                 pinsLeftInFrame = PINS_IN_FRAME;
-            } else {
-                if (PINS_IN_FRAME == pins) {
-                    cumulative_score += rollResult.get(index + 1);
-                    cumulative_score += rollResult.get(index + 2);
-                    framesCompleted = frame;
-                    ++frame;
-                    pinsLeftInFrame = PINS_IN_FRAME;
-                } else {
-                    pinsLeftInFrame -= pins;
+                rollTwoInFrame = false;
+            } else if (PINS_IN_FRAME == pins) {
+                cumulative_score += rollResult.get(index + 1);
+                cumulative_score += rollResult.get(index + 2);
+                if (frame == FRAMES_IN_GAME) {
+                    index += 2;
                 }
+                framesCompleted = frame;
+                ++frame;
+                pinsLeftInFrame = PINS_IN_FRAME;
+                rollTwoInFrame = false;
+            } else {
+                pinsLeftInFrame -= pins;
+                rollTwoInFrame = true;
             }
             cumulative_score += pins;
             if (framesCompleted == FRAMES_IN_GAME) {

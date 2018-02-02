@@ -154,4 +154,80 @@ public class GameTest {
         game.roll(1);
         Assert.assertThat("Expected a score of 30", game.score(), is(equalTo(30)));
     }
+
+    @Test
+    public void aStrikeRollInTheLastFrameResultsInTwoBonusRolls() {
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 30", game.score(), is(equalTo(30)));
+    }
+
+    @Test
+    public void scoreCorrectlyTreatsAZeroAndThenAnyRollAsTheCompletionOfAFrame() {
+        game.roll(0);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 19", game.score(), is(equalTo(19)));
+    }
+
+    @Test
+    public void scoreCorrectlyTreatsAZeroAndThenTenInAFrameAsASpare() {
+        game.roll(0);
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 29", game.score(), is(equalTo(29)));
+    }
 }
