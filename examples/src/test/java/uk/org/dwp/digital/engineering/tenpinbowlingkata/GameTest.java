@@ -45,7 +45,7 @@ public class GameTest {
     }
 
     @Test
-    public void scoreReturnsNegativeOneIfTheGameIsNotFinished() {
+    public void scoreReturnsNegativeOneIfTheGameIsNoRollsAreMade() {
         Assert.assertThat("Expected a score of -1", game.score(), is(equalTo(-1)));
     }
 }

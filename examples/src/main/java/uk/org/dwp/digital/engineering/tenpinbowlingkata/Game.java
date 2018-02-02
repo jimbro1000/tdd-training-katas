@@ -6,6 +6,7 @@ import java.util.List;
 public class Game {
     private static final int MINIMUM_PINS = 0;
     private static final int MAXIMUM_PINS = 10;
+    private static final int INCOMPLETE_GAME_SCORE = -1;
     List<Integer> rollResult = new ArrayList<>();
 
     public void roll(int pins) {
@@ -15,6 +16,6 @@ public class Game {
     }
 
     public int score() {
-        return -1;
+        return INCOMPLETE_GAME_SCORE;
     }
 }
