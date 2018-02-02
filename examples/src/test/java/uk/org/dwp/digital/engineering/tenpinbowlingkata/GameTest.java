@@ -33,6 +33,14 @@ public class GameTest {
         game.roll(2);
         game.roll(-1);
         Assert.assertThat("Expected roll to store 2 for the first roll", game.rollResult.get(0), is(equalTo(2)));
-        Assert.assertThat("Expected roll to ignore roll", game.rollResult.size(), is(equalTo(1)));
+        Assert.assertThat("Expected roll to ignore the second roll", game.rollResult.size(), is(equalTo(1)));
+    }
+
+    @Test
+    public void methodRollIgnoresPinValuesGreaterThanTen() {
+        game.roll(11);
+        game.roll(5);
+        Assert.assertThat("Expected roll to ignore the first roll", game.rollResult.size(), is(equalTo(1)));
+        Assert.assertThat("Expected roll to store 5 for the second roll", game.rollResult.get(0), is(equalTo(5)));
     }
 }
