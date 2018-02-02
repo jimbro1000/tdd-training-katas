@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
+    private static final int MINIMUM_PINS = 0;
     List<Integer> rollResult = new ArrayList<>();
 
     public void roll(int pins) {
-        if (pins >= 0) {
+        if (pins >= MINIMUM_PINS) {
             rollResult.add(pins);
         }
     }
