@@ -23,8 +23,12 @@ public class Game {
         int frame = 1;
         int pinsLeftInFrame = PINS_IN_FRAME;
         int cumulative_score = 0;
-        for (Integer pins : rollResult) {
+        for (int index = 0; index < rollResult.size(); ++index) {
+            int pins = rollResult.get(index);
             if (pinsLeftInFrame < PINS_IN_FRAME) {
+                if (pinsLeftInFrame == pins) {
+                    cumulative_score += rollResult.get(index + 1);
+                }
                 framesCompleted = frame;
                 ++frame;
                 pinsLeftInFrame = PINS_IN_FRAME;

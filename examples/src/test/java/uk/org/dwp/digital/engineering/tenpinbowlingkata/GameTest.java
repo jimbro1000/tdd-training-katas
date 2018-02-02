@@ -79,4 +79,29 @@ public class GameTest {
         game.roll(1);
         Assert.assertThat("Expected a score of 20", game.score(), is(equalTo(20)));
     }
+
+    @Test
+    public void aSpareRollResultsInTheNextRollBeingAddedBack() {
+        game.roll(1);
+        game.roll(9);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        game.roll(1);
+        Assert.assertThat("Expected a score of 29", game.score(), is(equalTo(29)));
+    }
 }
