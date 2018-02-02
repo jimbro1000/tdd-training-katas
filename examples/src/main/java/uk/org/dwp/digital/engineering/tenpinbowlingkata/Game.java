@@ -7,6 +7,8 @@ public class Game {
     List<Integer> rollResult = new ArrayList<>();
 
     public void roll(int pins) {
-        rollResult.add(pins);
+        if (pins >= 0) {
+            rollResult.add(pins);
+        }
     }
 }
