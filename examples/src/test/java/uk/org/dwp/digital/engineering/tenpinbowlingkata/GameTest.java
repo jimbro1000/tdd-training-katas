@@ -50,6 +50,12 @@ public class GameTest {
     }
 
     @Test
+    public void scoreReturnsNegativeOneIfTheGameIsIncomplete() {
+        game.roll(1);
+        Assert.assertThat("Expected a score of -1", game.score(), is(equalTo(-1)));
+    }
+
+    @Test
     public void scoreAddsThePinsValuesTogether() {
         game.roll(1);
         game.roll(1);
