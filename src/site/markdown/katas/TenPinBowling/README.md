@@ -77,7 +77,7 @@ The player starts a new game and makes a series of rolls with the following outc
 |  3   |  8   |   2   |  17              |
 |  4   |  2   |   2   |  19+r(5)         |
 |  5   | 10   |   3   |  39+r(6)+r(7)    |
-|  6   |  9   |   4   |  57+r(7)         |
+|  6   |  9   |   4   |  58+r(7)         |
 |  7   |  1   |   4   |  59+r(8)         |
 |  8   |  6   |   5   |  71              |
 |  9   |  2   |   5   |  73              |
