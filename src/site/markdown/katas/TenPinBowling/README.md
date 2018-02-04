@@ -70,7 +70,7 @@ score of a player and provides a final total score.
 ### Example 1
 The player starts a new game and makes a series of rolls with the following outcomes:
 
-| Roll | Pins | Frame |   Cumm. Score    |
+| Roll | Pins | Frame |    Cum. Score    |
 | ---- | ---- | ----- | ---------------- |
 |  1   |  7   |   1   |   7              |
 |  2   |  2   |   1   |   9              |
@@ -90,13 +90,13 @@ The player starts a new game and makes a series of rolls with the following outc
 | 16   |  1   |  10   | 159+r(17)        |
 | 17   |  8   |  10B  | 167              |
 
-Within the calculation of the cummulative score forward scores are shown using r(n)
-where n is the roll number. B in the frame column represents a bonus roll
+Within the calculation of the cumulative score forward scores are shown using r(*n*)
+where *n* is the roll number. B in the frame column represents a bonus roll
 
 ### Example 2
 The perfect game
 
-| Roll | Pins | Frame |   Cumm. Score    |
+| Roll | Pins | Frame |    Cum. Score    |
 | ---- | ---- | ----- | ---------------- |
 |  1   | 10   |   1   |  10+r(2)+r(3)    |
 |  2   | 10   |   2   |  30+2r(3)+r(4)   |
@@ -114,3 +114,11 @@ The perfect game
 ## References
 This kata is based on another, provided (in part) by Uncle Bob with a step-by-step
 [solution](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata).
+
+While the original Uncle Bob kata and solution is relevant, this kata has evolved
+and there are differences.
+
+### Worked Solution
+The "tenPinBowlingPart1" branch contains a start to finish example of tackling the
+requirements of the kata. There is no commentary but it does consist of a number 
+of commits with messages.
