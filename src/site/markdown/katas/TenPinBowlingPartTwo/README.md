@@ -1,6 +1,6 @@
 # Ten Pin Bowling Score Card Part Two
 
-## Grade - Basic
+## Grade - Intermediate
 
 ## Introduction
 An extension to a simpler kata, this kata adds requirements to a finished
@@ -10,7 +10,7 @@ If necessary a worked solution for the earlier kata is available from the
 branch "tenPinBowlingPart1".
 
 ## Requirements
-  Extend the "Game" class with a new method
+  * Extend the "Game" class with a new method
   * scoreCard() can be called after each roll to return the score breakdown per
   frame
   * where a frame score is undetermined a zero is shown for the frame score
