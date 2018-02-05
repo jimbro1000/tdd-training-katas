@@ -19,9 +19,8 @@ the declaration of constants. The end result is typically code coverage in the
 area of 70-80%.
 
 The calculation itself is pretty simple
-```
-Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%
-```
+
+    Code Coverage = (Number of lines of code exercised)/(Total Number of lines of code) * 100%
 
 ## When it matters
 

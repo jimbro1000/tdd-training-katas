@@ -51,13 +51,15 @@ doesn't attempt to abbreviate anything.
 Doing the same in JavaScript with mocha follows a simple pattern. A new folder
 "test" and a script to contain the tests, `fizzBuzzTest.js`. The template for a
 mocha test is
-```Javascript
-describe("fizzbuzz", function() {
-  it("returns a string of numbers one to one hundred separated by commas", function() {
-    assert
-  });
-});
-```
+
+    describe("fizzbuzz", function() {
+      it("returns a string of numbers one to one hundred separated by commas", 
+        function() {
+            assert
+        }
+      );
+    });
+
 Mocha automatically provides the describe and it implementation so there is no
 need to do anything other than write the code but the assertion starts to hit
 the same problem seen in Java, the assertion library needs to be selected as a
@@ -102,32 +104,32 @@ stub implementation for the solution.
 
 Before populating the stub it is essential to finish the test itself. In Java
 the test should look something like this (with the expected string abbreviated):
-```Java
-import org.junit.Assert;
-import org.junit.Test;
 
-import static org.hamcrest.coreMatchers.equalTo;
-import static org.hamcrest.coreMatchers.is;
-
-class fizzBuzzTest {
-  @Test
-  public void fizzBuzzReturnsAStringOfNumbersOneToOneHundredSeparatedByCommas() {
-    Assert.assertThat(Solution.fizzBuzz(), is(equalTo("1,2,3,4...98,99,100")));
-  }
-}
-```
+    import org.junit.Assert;
+    import org.junit.Test;
+    
+    import static org.hamcrest.coreMatchers.equalTo;
+    import static org.hamcrest.coreMatchers.is;
+    
+    class fizzBuzzTest {
+      @Test
+      public void fizzBuzzReturnsAStringOfNumbersOneToOneHundredSeparatedByCommas() {
+        Assert.assertThat(Solution.fizzBuzz(), is(equalTo("1,2,3,4...98,99,100")));
+      }
+    }
 
 The Javascript equivalent is not dissimilar:
-```Javascript
-var assert=require("assert");
-var solution=requires("../fizzbuzz.js");
 
-describe("fizzbuzz", function() {
-  it("returns a string of numbers one to one hundred separated by commas", function () {
-    assert.equals("1,2,3,4...98,99,100", solution.fizzbuzz());
-  });
-});
-```
+    var assert=require("assert");
+    var solution=requires("../fizzbuzz.js");
+    
+    describe("fizzbuzz", function() {
+      it("returns a string of numbers one to one hundred separated by commas", 
+        function () {
+          assert.equals("1,2,3,4...98,99,100", solution.fizzbuzz());
+        }
+      );
+    });
 
 The next step is to run the test which should result in a failure as only a
 stub implementation exists.
