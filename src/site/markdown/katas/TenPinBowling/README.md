@@ -120,5 +120,5 @@ and there are differences.
 
 ### Worked Solution
 The "tenPinBowlingPart1" branch contains a start to finish example of tackling the
-requirements of the kata. There is no commentary but it does consist of a number
+requirements of the kata. There is no commentary but it does consist of a number 
 of commits with messages.
