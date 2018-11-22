@@ -52,6 +52,7 @@ entry is made.
 
 ```Java
 import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.classic.Logger;
 import ch.qos.logback.core.Appender;
 import org.junit.Before;
 import org.junit.Test;
@@ -72,8 +73,7 @@ public class ValidateLoggingTest {
 
   @Before
   public void setup() {
-    ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory
-        .getLogger(Logger.ROOT_LOGGER_NAME);
+    Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
     Mockito.when(appender.getName()).thenReturn("MOCK");
     Mockito.when(appender.isStarted()).thenReturn(true);
     logger.addAppender(appender);
@@ -84,21 +84,19 @@ public class ValidateLoggingTest {
     MessageValidator validator = new MessageValidator();
     validator.validate("");
 
-    Mockito.verify(appender, Mockito.times(1))
-        .doAppend(Matchers.argThat(new ArgumentMatcher() {
-          @Override
-          public boolean matches(Object argument) {
-            boolean result = false;
-            if (argument instanceof ILoggingEvent) {
-              ILoggingEvent loggingEvent = (ILoggingEvent) argument;
-              if (loggingEvent.getLevel() == Level.ERROR) {
-                result = loggingEvent.getFormattedMessage()
-                    .equals("This is an error log message");
-              }
-            }
-            return result;
+    Mockito.verify(appender, Mockito.times(1)).doAppend(Matchers.argThat(new ArgumentMatcher() {
+      @Override
+      public boolean matches(Object argument) {
+        boolean result = false;
+        if (argument instanceof ILoggingEvent) {
+          ILoggingEvent loggingEvent = (ILoggingEvent) argument;
+          if (loggingEvent.getLevel() == Level.ERROR) {
+            result = loggingEvent.getFormattedMessage().equals("This is an error log message");
           }
-        }));
+        }
+        return result;
+      }
+    }));
   }
 }
 ```
@@ -125,5 +123,3 @@ public class MessageValidator {
   }
 }
 ```
-
-[https://iamninad.com/unit-test-logback-using-junits/]
