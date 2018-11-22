@@ -52,7 +52,6 @@ entry is made.
 
 ```Java
 import ch.qos.logback.classic.spi.ILoggingEvent;
-import ch.qos.logback.classic.Logger;
 import ch.qos.logback.core.Appender;
 import org.junit.Before;
 import org.junit.Test;
@@ -73,7 +72,7 @@ public class ValidateLoggingTest {
 
   @Before
   public void setup() {
-    Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+    ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
     Mockito.when(appender.getName()).thenReturn("MOCK");
     Mockito.when(appender.isStarted()).thenReturn(true);
     logger.addAppender(appender);
