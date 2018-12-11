@@ -1,0 +1,39 @@
+<document xmlns="http://maven.apache.org/DOCUMENT/1.0.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/DOCUMENT/1.0.1
+          http://maven.apache.org/xsd/document-1.0.1.xsd"
+          outputName="tdd-katas-${project.version}">
+    <meta>
+        <title>DWP Digital Engineering Coding Standards - Test Driven Development</title>
+        <author>Julian Brown</author>
+    </meta>
+    <toc depth="1" name="Table of Contents">
+        <item name="Introduction" ref="README.md"/>
+        <item name="TDD 101" ref="Documentation\TDD101.md"/>
+        <item name="The TDD Cycle" ref="Documentation\TheTDDCycle.md"/>
+        <item name="Code Coverage" ref="Documentation\CodeCoverage.md"/>
+        <item name="The Art of Letting Go" ref="Documentation\LettingGo.md"/>
+        <item name="Repetition" ref="Documentation\Repetition.md"/>
+        <item name="Test Sizes" ref="Documentation\TestSizes.md"/>
+        <item name="Test Driven Design" ref="Documentation\AdvancedTDD.md"/>
+        <item name="Logging Tests" ref="Documentation\LoggingStories.md"/>
+        <item name="Kata 1 - Fizz Buzz" ref="katas\FizzBuzz\README.md"/>
+        <item name="Kata 2 - String Calculator" ref="katas\StringCalculator\README.md"/>
+        <item name="Kata 3 - Parking Bill" ref="katas\ParkingBill\README.md"/>
+        <item name="Kata 4 - Rune Finder" ref="katas\RuneFinder\README.md"/>
+        <item name="Kata 5 - Phone Bill" ref="katas\PhoneBill\README.md"/>
+        <item name="Kata 6.1 - Ten Pin Bowling Part 1" ref="katas\TenPinBowling\README.md"/>
+        <item name="Kata 6.2 - Ten Pin Bowling Part 2" ref="katas\TenPinBowlingPartTwo\README.md"/>
+        <item name="Kata 7 - Disc Intersections" ref="katas\DiscIntersections\README.md"/>
+        <item name="Kata 8.1 - Travel Time Service" ref="katas\TravelTimeCalculator\README.md"/>
+        <item name="Kata 8.2 - When To Travel" ref="katas\WhenToTravel\README.md"/>
+    </toc>
+    <cover>
+        <coverTitle>Engineering Coding Standards - Test Driven Development</coverTitle>
+        <coverSubTitle>Version: ${project.version}</coverSubTitle>
+        <coverType>Training Guide</coverType>
+        <projectName>${project.name}</projectName>
+        <companyName>Department for Work and Pensions</companyName>
+        <companyLogo>${project.basedir}\src\site\resources\dwpLogo.png</companyLogo>
+    </cover>
+</document>

@@ -1,9 +1,10 @@
 # The TDD Cycle - Red-Green-Refactor
 
-As already mentioned the core of TDD is the red-green-refactor cycle - each
+The core of TDD is the "red-green-refactor" cycle - each
 cycle is the creation of a test, the code necessary to satisfy the test
 followed by refactoring the tests and code to make sure it is all relevant
-and conforms with development standards.
+and conforms with development standards. Every cycle follows the same 
+pattern.
 
 ## Painting it Red
 
@@ -19,9 +20,9 @@ the error quickly becomes apparent.
 ## Moving to Green
 
 The idea of the green phase of the cycle is to implement (or change) just enough
-code to fix test execution so that it doesn't fail. In the early stages of
+code to fix test execution so that it does not fail. In the early stages of
 development this is likely to be simply returning fixed dummy values that
-satisfy the test, building up a wireframe of code that will enable further
+satisfy the test, building up a wire frame of code that will enable further
 changes. As the tests become more complex, so does the code but at all times it
 only ever does enough to satisfy the tests.
 
@@ -40,13 +41,13 @@ change can be quite large, that is fine but it can be quite hard to become lost
 in the code or start attempting more than is needed to achieve the immediate
 goal.
 
-The art of TDD is keeping the changes small and focussed. If you start to really
+The art of TDD is keeping the changes small and focused. If you start to really
 break it down the changes amount to just one or two lines of code at a time. The
 point at which the test code becomes red you switch to making it green but that
-doesn't necessarily mean creating a whole test. With modern IDEs it is clear when
+does not necessarily mean creating a whole test. With modern IDEs it is clear when
 the test code is broken - fixing that test code is the primary concern. This
 will sometimes happen while composing the test - for example referencing a class
-that doesn't yet exist (typically the very first test will hit this). The step
+that does not yet exist (typically the very first test will hit this). The step
 to fix the test is to create the class. The test that is being worked on is not
 complete even when the class is created but a mini red-green-refactor cycle has
 taken place. The end result is that the code is always left in a suitable state.
@@ -88,14 +89,14 @@ import org.junit.Test;
 
 public class TddCycleSolutionTest {
   @Test
-  public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
     TddCycleSolution tddCycleSolution;
   }
 }
 ```
 
 As the test is built up the next problem comes when the class being tested is
-referenced for the first time. The class doesn't exist yet so the IDE starts to
+referenced for the first time. The class does not exist yet so the IDE starts to
 complain.
 
 ```java
@@ -107,7 +108,7 @@ public class TddCycleSolution {
 ```
 
 Creating a stub for the missing class turns the test green again even though it
-doesn't actually do anything yet. The simplest change to resolve the problem is
+does not actually do anything yet. The simplest change to resolve the problem is
 made. Once again there is nothing to refactor so the developer returns to the
 test.
 
@@ -118,7 +119,7 @@ import org.junit.Test;
 
 public class TddCycleSolutionTest {
   @Test
-  public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
     TddCycleSolution tddCycleSolution = new TddCycleSolution();
     Assert;
   }
@@ -137,7 +138,7 @@ import org.junit.Test;
 
 public class TddCycleSolutionTest {
   @Test
-  public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
     TddCycleSolution tddCycleSolution = new TddCycleSolution();
     Assert;
   }
@@ -148,13 +149,18 @@ Importing the Assert class fixes the immediate problem but the line is still
 not valid and needs completing.
 
 ```java
----
-@Test
-public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
-  TddCycleSolution tddCycleSolution = new TddCycleSolution();
-  Assert.assertThat(tddCycleSolution.check(""));
+package tdd.example.first;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TddCycleSolutionTest {
+  @Test
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
+    TddCycleSolution tddCycleSolution = new TddCycleSolution();
+    Assert.assertThat(tddCycleSolution.check(""));
+  }
 }
----
 ```
 
 Referencing the check method of the solution breaks the test again and requires
@@ -174,13 +180,18 @@ The stub method fixes the problem with just a few lines of basic code, just
 enough to satisfy the immediate issue.
 
 ```java
----
-@Test
-public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
-  TddCycleSolution tddCycleSolution = new TddCycleSolution();
-  Assert.assertThat(tddCycleSolution.check(""),is());
+package tdd.example.first;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TddCycleSolutionTest {
+  @Test
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
+    TddCycleSolution tddCycleSolution = new TddCycleSolution();
+    Assert.assertThat(tddCycleSolution.check(""),is());
+  }
 }
----
 ```
 
 Extending the line fixes the error relating to the syntax of the line but a new
@@ -200,13 +211,18 @@ again the test is green. There is still nothing to refactor so the developer
 continues.
 
 ```java
----
-@Test
-public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
-  TddCycleSolution tddCycleSolution = new TddCycleSolution();
-  Assert.assertThat(tddCycleSolution.check(""),is(equalTo()));
+package tdd.example.first;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TddCycleSolutionTest {
+  @Test
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
+    TddCycleSolution tddCycleSolution = new TddCycleSolution();
+    Assert.assertThat(tddCycleSolution.check(""),is(equalTo()));
+  }
 }
----
 ```
 
 The test breaks again with the addition of the `equalTo()` matcher which is
@@ -223,7 +239,7 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class TddCycleSolutionTest {
   @Test
-  public void whenGivenAnEmptyStringTheSoluionReturnsAZero() {
+  public void whenGivenAnEmptyStringTheSolutionReturnsAZero() {
     TddCycleSolution tddCycleSolution = new TddCycleSolution();
     Assert.assertThat(tddCycleSolution.check(""),is(equalTo(0)));
   }
