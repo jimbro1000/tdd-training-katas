@@ -20,6 +20,9 @@ The simple way to isolate your test class is to use mocking to prevent test
 execution escaping to other classes. There are some things that need to be
 understood about mocking and the different types of "mocks" are used.
 
+Martin Fowler provided a detailed explanation of the differences back in 2004: 
+[Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html)
+
 ### Stubs
 
 A stub object is a replacement for a functional class/object with very simple
