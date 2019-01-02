@@ -20,7 +20,7 @@ The simple way to isolate your test class is to use mocking to prevent test
 execution escaping to other classes. There are some things that need to be
 understood about mocking and the different types of "mocks" are used.
 
-Martin Fowler provided a detailed explanation of the differences back in 2004: 
+Martin Fowler provided a detailed explanation of the differences back in 2004:
 [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html)
 
 ### Stubs
@@ -81,3 +81,40 @@ then the isolation is broken.
 The practicalities of doing this class by class process is problematic. It is
 fine when there is just a few classes under test but in a large, complex
 system it is impractical to test each class by itself.
+
+## What Happens When A Unit Test Covers Other Classes
+
+A unit test that covers more than one unit is no longer a unit test, it becomes
+a component test or integration test. The purpose is to validate the interaction
+between classes rather than the specific behaviour of a single class.
+
+Some frameworks unfortunately muddy the waters and create situations where a
+unit test does more than it should. To give an example of this, the Apache
+Camel framework provides its own domain specific language (DSL) for the
+construction of "routes". Historically this was performed externally through an
+XML configuration document which kept things nice and clean but recent versions
+encourage the use of Camel DSL to perform the same task but because it is
+implementation code it *must* have a unit test to describe what is happening.
+
+This appears to break the isolation rule but in this specific case the
+unit test approach is still valid - to achieve adequate code coverage and follow
+the TDD approach of defining behaviour as a test before writing the code.
+
+A well written unit test in this case would be to ensure that the DSL only
+does what is required and that A routes to B routes to C. The Camel test
+framework provides tools for mocking all of the necessary components and
+isolate the DSL. Unfortunately a custom test runner is needed that implements
+the supporting framework (and all beans defined).
+
+It would be very easy to continue the testing here to include the behaviours of
+the components but that really is a breach of the isolation rule. The result
+would be an integration test rather than a unit test. It is better to implement
+the integration tests separately in a different test class (or supporting test
+framework).
+
+Regardless of the language and framework the principles described remain the
+same. Unit tests must isolate the class under test and any tangental classes
+must be mocked out to maintain that isolation.
+
+Any tests that need to combine classes should themselves be separated from the
+unit tests as they are not unit tests.
