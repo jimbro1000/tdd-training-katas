@@ -27,7 +27,7 @@ Martin Fowler provided a detailed explanation of the differences back in 2004:
 
 A stub object is a replacement for a functional class/object with very simple
 scripted responses to cover some necessary scenario typically irrespective of
-input.
+input. Typically only a single response to input is provided.
 
 ### Dummy
 
@@ -35,40 +35,51 @@ A dummy object contains no behaviour and exists only to satisfy an otherwise
 redundant value. There is no internal logic and usually returned values are
 null or defaults.
 
+### Spies
+
+A spy is a specialist variation on any of the other categories (typically a
+stub) that records information about how it is used, such as number of times
+called, parameters provided on a call, etc.
+
 ### Fake
 
 A fake object provides a complex, functional but controlled substitute for a
 dependency. In most scenarios this would be a representation of an external or
-dependent system rather than just a class.
+dependent system rather than just a class. An example would be a minimal
+resource implementation of another system using an in-memory database.
 
 ### Mock
 
-A true mock (rather than the blanket term) are pre-programmed objects required
-to satisfy the expectations of a given scenario.
+A true mock (rather than the blanket term) is a pre-programmed objects required
+to satisfy the expectations of a given scenario or set of scenarios. This is
+not a working implementation (as in a _fake_) or simplified single response (as
+in a _stub_).
 
 ## Mocks vs Stubs
 
 From the brief descriptions above it should be pretty obvious that the
 distinctions between the mock types are narrow and developers frequently
 describe mocks as stubs and vice-versa or a stub as a dummy. While this does
-lead to some confusion the important bit is that you use them.
+lead to some confusion the important bit is that you use them in an appropriate
+manner - getting the name right isn't quite so important (but recommended) but
+understanding what type of mock is required is vital.
 
 ## Mocking in Java
 
 The defacto unit test framework in Java, jUnit, does not provide a mocking
-mechanism, instead the Mockito framework is typically used to provide the
-mocking capability. Mockito is a powerful tool in the unit test arsenal and it
-is vital that it is used appropriately.
+mechanism, instead the **Mockito** framework is typically used to provide the
+mocking capability. **Mockito** is a powerful tool in the unit test arsenal and
+it is vital that it is used appropriately.
 
-There are other frameworks like JMockit for mocking and others again that extend
-the capabilities of Mockito, such as PowerMock.
+There are other frameworks like **JMockit** or **EasyMock** for mocking and
+others again that extend the capabilities of **Mockito**, such as **PowerMock**.
 
 ## Mocking in JavaScript
 
 The proliferation of testing frameworks in JavaScript means there is a lot to
-chose from but popular tools like Jasmine and Jest provide solid starting
-points. Some provide mocking as standard while others need to be used in
-combination.
+chose from but popular tools like **Jasmine** and **Jest** provide solid
+starting points. Some provide mocking as standard while others need to be used
+in combination.
 
 ## Checking Isolation
 
