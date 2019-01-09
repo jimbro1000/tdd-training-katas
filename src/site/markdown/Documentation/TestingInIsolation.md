@@ -20,26 +20,26 @@ The simple way to isolate your test class is to use mocking to prevent test
 execution escaping to other classes. There are some things that need to be
 understood about mocking and the different types of "mocks" are used.
 
-Martin Fowler provided a detailed explanation of the differences back in 2004:
+Martin Fowler provided a detailed explanation of the differences back in 2004 in
 [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html)
 
 ### Stubs
 
 A stub object is a replacement for a functional class/object with very simple
 scripted responses to cover some necessary scenario typically irrespective of
-input. Typically only a single response to input is provided.
-
-### Dummy
-
-A dummy object contains no behaviour and exists only to satisfy an otherwise
-redundant value. There is no internal logic and usually returned values are
-null or defaults.
+input. Typically only a _single_ response to input is provided.
 
 ### Spies
 
 A spy is a specialist variation on any of the other categories (typically a
 stub) that records information about how it is used, such as number of times
 called, parameters provided on a call, etc.
+
+### Dummy
+
+A dummy object contains <u>no behaviour</u> and exists only to satisfy an
+otherwise redundant value. There is no internal logic and usually returned
+values are null or defaults.
 
 ### Fake
 
