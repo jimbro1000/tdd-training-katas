@@ -26,9 +26,9 @@ a number
 
 6. Three numbers, delimited either way, returns the sum (e.g. "2,3\n4" returns 9)
 
-7. Negative numbers result in an exception being thrown
+7. Negative input values result in an exception being thrown
 
-8. Numbers over 1,000 are ignored
+8. Input values over 1,000 are ignored
 
 9. A single char delimiter can be defined on the first line by prefixing the
 character with a double forward slash (e.g. "//#\n2#3" returns 5)
