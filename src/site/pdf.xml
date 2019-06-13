@@ -4,8 +4,8 @@
           http://maven.apache.org/xsd/document-1.0.1.xsd"
           outputName="tdd-katas-${project.version}">
     <meta>
-        <title>DWP Digital Engineering Coding Standards - Test Driven Development</title>
-        <author>Julian Brown</author>
+        <title>Engineering Coding Standards - Test Driven Development</title>
+        <author>Julian Brown (jimbro1000)</author>
     </meta>
     <toc depth="1" name="Table of Contents">
         <item name="Introduction" ref="README.md"/>
@@ -33,7 +33,6 @@
         <coverSubTitle>Version: ${project.version}</coverSubTitle>
         <coverType>Training Guide</coverType>
         <projectName>${project.name}</projectName>
-        <companyName>Department for Work and Pensions</companyName>
-        <companyLogo>${project.basedir}/src/site/resources/dwpLogo.png</companyLogo>
+        <companyName>the-lair.org.uk</companyName>
     </cover>
 </document>
