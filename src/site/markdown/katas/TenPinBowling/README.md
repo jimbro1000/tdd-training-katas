@@ -3,16 +3,16 @@
 ## Grade - Beginner
 
 ## Introduction
-Ten pin bowling is a sport particularly popular in the USA where a player rolls 
+Ten pin bowling is a sport particularly popular in the USA where a player rolls
 a bowling bowl down an "alley" in an attempt to knock over a set of ten pins at
 the end.
 
 The ten pin bowling game consists of 10 frames. In each frame the player has
-two opportunities to knock down the 10 pins.  The score for the frame is the 
-total number of pins knocked down, plus bonuses for strikes and spares. At the 
+two opportunities to knock down the 10 pins.  The score for the frame is the
+total number of pins knocked down, plus bonuses for strikes and spares. At the
 end of a frame the pins available to knock down is reset to 10.
 
-Scoring is maintained on a score card that tracks the result of each roll of the 
+Scoring is maintained on a score card that tracks the result of each roll of the
 bowling ball, and the total score achieved.
 
 | score card |     |     |     |     |     |     |     |     |     |       |
@@ -26,8 +26,8 @@ that frame is the number of pins knocked down by the next roll. So in frame 3
 above, the score is 10 (the total number knocked down) plus a bonus of 5 (the
 number of pins knocked down on the next roll.)
 
-A strike is given when the player knocks down all 10 pins on his first try. The 
-bonus for that frame is the value of the next two balls rolled in the following 
+A strike is given when the player knocks down all 10 pins on his first try. The
+bonus for that frame is the value of the next two balls rolled in the following
 frame. An example of this is shown in frame 5, here the score for frame 5 is 10
 plus 1 from the next two rolls in frame 6.
 
@@ -43,15 +43,19 @@ score of a player and provides a final total score.
 ## Requirements
   * Write a class named “Game” that has two methods
   * roll(pins) is called each time the player rolls a ball.  
-    * The argument (pins) is the number of pins knocked down on the roll and 
+    * The argument (pins) is the number of pins knocked down on the roll and
       supplied as an integer
     * pins can never be more than 10 and never less than 0
+  * score() is called only at the very end of the game. It returns the total
+    score for that game as an integer
+    * the minimum possible score is 0
+    * the maximum possible score is 300
     * there are at most two rolls for each frame, except for the tenth frame
       which can have three rolls
     * if the first roll of a frame is 10 then a strike is recorded and the
       score for this roll will include the next two rolls added in
-    * if a strike is recorded then a second roll for that frame is not permitted, 
-      unless it is the tenth frame
+    * if a strike is recorded then a second roll for that frame is not
+      permitted, unless it is the tenth frame
     * if the sum of pins for a single frame is 10 then a spare is recorded and
       the score for this roll will include the next roll added in
     * if the roll is the first for the tenth frame and a strike is recorded a
@@ -61,10 +65,6 @@ score of a player and provides a final total score.
       single bonus frame is permitted, but only for a single roll
     * bonus frames do not include the addition of subsequent rolls where a
       strike or spare is recorded
-  * score() is called only at the very end of the game. It returns the total
-    score for that game as an integer
-    * the minimum possible score is 0
-    * the maximum possible score is 300
 
 ## Examples
 ### Example 1

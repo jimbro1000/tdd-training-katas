@@ -4,7 +4,7 @@
           http://maven.apache.org/xsd/document-1.0.1.xsd"
           outputName="tdd-katas-${project.version}">
     <meta>
-        <title>DWP Digital Engineering Coding Standards</title>
+        <title>DWP Digital Engineering Coding Standards - Test Driven Development</title>
         <author>Julian Brown</author>
     </meta>
     <toc depth="1" name="Table of Contents">
@@ -16,6 +16,7 @@
         <item name="Repetition" ref="Documentation\Repetition.md"/>
         <item name="Test Sizes" ref="Documentation\TestSizes.md"/>
         <item name="Test Driven Design" ref="Documentation\AdvancedTDD.md"/>
+        <item name="Logging Tests" ref="Documentation\LoggingStories.md"/>
         <item name="Kata 1 - Fizz Buzz" ref="katas\FizzBuzz\README.md"/>
         <item name="Kata 2 - String Calculator" ref="katas\StringCalculator\README.md"/>
         <item name="Kata 3 - Parking Bill" ref="katas\ParkingBill\README.md"/>
@@ -28,7 +29,7 @@
         <item name="Kata 8.2 - When To Travel" ref="katas\WhenToTravel\README.md"/>
     </toc>
     <cover>
-        <coverTitle>Engineering Coding Standards</coverTitle>
+        <coverTitle>Engineering Coding Standards - Test Driven Development</coverTitle>
         <coverSubTitle>Version: ${project.version}</coverSubTitle>
         <coverType>Training Guide</coverType>
         <projectName>${project.name}</projectName>
@@ -36,4 +37,3 @@
         <companyLogo>${project.basedir}\src\site\resources\dwpLogo.png</companyLogo>
     </cover>
 </document>
-
