@@ -57,3 +57,52 @@ requirements are met and that only those requirements are met.
 When it comes to iterating on the product the tests built provide an easy way
 of making sure that the original requirements are maintained while new
 requirements are added.
+
+## Agile Requirements ##
+
+Agile exists to empower the developers and simplify the construction of software
+by taking a realistic, pragmatic view of what requirements are and how they are
+implemented. A cornerstone of the process is well-written requirements, which
+also happens to be a cornerstone of TDD (with good reason given the origins of
+both).
+
+So what is a well-written requirement?
+
+The agile manifesto itself doesn't describe it, only that it should be
+customer centric, but dig deeper and the concept of "user stories" becomes
+apparent. Ultimately a user story is an atomic increment to the product. It
+describes everything needed to make the transformation, no matter how small.
+
+If the story has any ambiguities or vagueness it should be rejected until it
+can be refined to the point of being precise. All too often a user story
+presented to a development team is simply a group of smaller, related stories
+that are better described as an epic. If this is the case then the story, by
+Agile standards, is not "ready" and will require refinement and decomposition
+into the atomic user stories that the developers require to progress.
+
+A good measure for a user story being well-written is the INVEST checklist
+
+  * Independent
+  * Negotiable
+  * Valuable
+  * Estimable
+  * Small
+  * Testable
+
+All of those six points are valuable but it is the last one that stands out in
+the context of TDD. In order for the user story to be sufficiently well written
+it must describe something that can be quantified and tested. An obvious
+component of this is that the story should contain acceptance criteria *and*
+the acceptance criteria be sufficiently detailed that it can be re-written as
+one or more tests.
+
+Conversely the negotiable point enforces that the user story should not be a
+*specific contract for features*. This leaves the developer with the freedom to
+interpret the story. It also means that the user story can change or even be
+discarded.
+
+Frequently the acceptance criteria will describe a "big test" - something that
+cannot directly be applied to TDD but, instead, form a member of the higher
+level tests that fill the test pyramid. If this is the case it will produce a
+set of smaller TDD requirements and tests that must be completed in order to
+satisfy the larger test.
