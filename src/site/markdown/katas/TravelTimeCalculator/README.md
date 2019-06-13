@@ -18,9 +18,11 @@ interfaces that are predefined and must be adhered to.
 The calculator accepts two locations and returns the predicted travel time
 between those two points. The interface for finding the travel time is a
 method "getTravelTime" and accepts two string values:
-```
-TravelTimeCalculator.getTravelTime(travelFromLocation, travelToLocation)
-```
+
+    TravelTimeCalculator.getTravelTime(
+        travelFromLocation, 
+        travelToLocation
+    )
 
 It is assumed that the method of travel is simply the fastest option and that
 the time to travel remains the same regardless of the time of day. Travel time
@@ -34,23 +36,24 @@ the from and to locations are the same the result is a zero time ("00:00").
 A list of all recognised locations can be obtained from the calculator through
 a method "getTravelLocations" that returns string with a comma separated list
 of locations in alphabetical order:
-```
-TravelTimeCalculator.getTravelLocations()
-```
+
+    TravelTimeCalculator.getTravelLocations()
 
 A list of possible destinations for a given location can be obtained by using a
 method "getTravelDestinations". This method accepts the queried location as a
 string. The output is a comma-separated list of destination locations:
-```
-TravelTimeCalculator.getTravelDestinations(location)
-```
+
+    TravelTimeCalculator.getTravelDestinations(location)
 
 The calculator also has a method to update the travel time based on history
 "setTravelTime" that accepts two string values for locations and a third string
 value holding the travel time in the format "hh:mm":
-```
-TravelTimeCalculator.setTravelTime(travelFromLocation, travelToLocation, travelTime)
-```
+
+    TravelTimeCalculator.setTravelTime(
+        travelFromLocation, 
+        travelToLocation, 
+        travelTime
+    )
 
 When setting the travel time, if a location is not recognised it is added to the
 dictionary of locations and the time taken stored verbatim. If both locations
@@ -69,16 +72,16 @@ To illustrate this, given the travel time data:
 | Manchester |           |       |        | NA         | 2:28      |
 | Newcastle  |           |       |        |            | NA        |
 
-Calling getTravelTime("Leeds","Manchester") returns the value "0:56"
+Calling `getTravelTime("Leeds","Manchester")` returns the value `"0:56"`
 
-Calling getTravelLocations() returns the value
-"Blackpool,Leeds,London,Manchester,Newcastle"
+Calling `getTravelLocations()` returns the value
+`"Blackpool,Leeds,London,Manchester,Newcastle"`
 
-Calling setTravelTime("Leeds","London","2:17") modifies the data such that
-calling getTravelTime("Leeds","London") returns the value "2:16"
+Calling `setTravelTime("Leeds","London","2:17")` modifies the data such that
+calling `getTravelTime("Leeds","London")` returns the value `"2:16"`
 
-Calling setTravelTime("London","Birmingham","1:22") adds Birmingham as a
-destination so that getTravelLocations() returns the value
-"Birmingham,Blackpool,Leeds,London,Manchester,Newcastle". Calling
-getTravelTime("Birmingham","London") returns the value "1:22". Calling
-getTravelTime("Leeds","Birmingham") returns the value "0:00".
+Calling `setTravelTime("London","Birmingham","1:22")` adds Birmingham as a
+destination so that `getTravelLocations()` returns the value
+`"Birmingham,Blackpool,Leeds,London,Manchester,Newcastle"`. Calling
+`getTravelTime("Birmingham","London")` returns the value `"1:22"`. Calling
+`getTravelTime("Leeds","Birmingham")` returns the value `"0:00"`.
