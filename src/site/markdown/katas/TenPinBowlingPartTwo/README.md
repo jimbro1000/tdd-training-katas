@@ -65,17 +65,12 @@ branch "tenPinBowlingPart1".
                     ]  
                   }  
                 }  
-              },  
-              "required": ["roll", "rollScore", "bonus"]  
+              }  
             },  
-            "frameScore": {  
-              "type": "integer",  
-              "minimum": 0,  
-              "maximum": 30  
-            }  
+            "required": ["frame", "rolls"]  
           }  
         },  
-        "required": ["frame", "rolls"]  
+        "required": ["totalScore", "frames"]  
       }  
     },  
     "required": ["totalScore", "frames"]  
