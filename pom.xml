@@ -9,13 +9,10 @@
     <modules>
         <module>examples</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-    </dependencies>
+    <properties>
+        <doxia-module-markdown.version>1.9</doxia-module-markdown.version>
+        <maven-pdf-plugin.version>1.4</maven-pdf-plugin.version>
+    </properties>
 
     <name>tdd-katas-documentation</name>
     <description>TDD Katas Documentation</description>
@@ -28,7 +25,7 @@
                 <!-- The generated PDF is directed by the file /src/site/pdf.xml -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pdf-plugin</artifactId>
-                <version>1.4</version>
+                <version>${maven-pdf-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>pdf</id>
@@ -50,7 +47,7 @@
                     <dependency>
                         <groupId>org.apache.maven.doxia</groupId>
                         <artifactId>doxia-module-markdown</artifactId>
-                        <version>1.9</version>
+                        <version>${doxia-module-markdown.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
