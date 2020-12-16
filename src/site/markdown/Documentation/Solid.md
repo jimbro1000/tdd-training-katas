@@ -50,14 +50,29 @@ exchanged.
 
 ## Interface Segregation Principle
 
-While Liskov subtitution promotes the use of abstract interfaces, the principle
-of interface segregation promotes the separation of functional groups of
-interface definition.
+While Liskov substitution promotes the use of abstract interfaces, the principle of interface segregation promotes the
+separation of functional groups of interface definition.
 
 ## Dependency Inversion Principle
 
-Dependency inversion demands that the dependency between classes is abstracted
-through the use of interfaces.
+Dependency inversion demands that the dependency between classes is abstracted through the use of interfaces.
+
+## What Does This Have to do With TDD?
+
+SOLID is not a part of TDD, that should be pretty obvious, but it is hard to talk about the quality of code without
+brushing on this topic.
+
+Not every computer programming language is object-oriented and SOLID can have different practical meanings to different
+languages or even frameworks within a language. The principles and ideas remain largely constant and this is all about
+writing better code.
+
+The really short version of SOLID is "does a piece of code have only one reason to change?" and "does a change affect
+more than one piece of code?". If your code is failing these basic questions then something is likely wrong, and you
+need to look at your design, tests and refactoring to see how you can fix it. The earlier you do this the easier it will
+be.
+
+The other point to remember is that this all came from the same heads that made TDD what it is - these things go
+hand-in-hand as part of the broader, holistic view of software engineering.
 
 ## References
 
