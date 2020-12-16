@@ -11,12 +11,14 @@
         <item name="Introduction" ref="README.md"/>
         <item name="TDD 101" ref="Documentation/TDD101.md"/>
         <item name="The TDD Cycle" ref="Documentation/TheTDDCycle.md"/>
+        <item name="How Agile Fits" ref="Documentation/agileTDD.md"/>
         <item name="Code Coverage" ref="Documentation/CodeCoverage.md"/>
         <item name="The Art of Letting Go" ref="Documentation/LettingGo.md"/>
         <item name="Repetition" ref="Documentation/Repetition.md"/>
         <item name="Test Sizes" ref="Documentation/TestSizes.md"/>
         <item name="Test Driven Design" ref="Documentation/AdvancedTDD.md"/>
         <item name="Logging Tests" ref="Documentation/LoggingStories.md"/>
+        <item name="Mocking in Unit Tests" ref="Documentation/TestingInIsolation.md"/>
         <item name="Kata 1 - Fizz Buzz" ref="katas/FizzBuzz/README.md"/>
         <item name="Kata 2 - String Calculator" ref="katas/StringCalculator/README.md"/>
         <item name="Kata 3 - Parking Bill" ref="katas/ParkingBill/README.md"/>
