@@ -68,4 +68,5 @@ Further reading is strongly recommended.
 * [Test sizes - the testing pyramid](./Documentation/TestSizes.md)
 * [Why this isn't the end](./Documentation/AdvancedTDD.md)
 * [Isolation - unit tests and mocking](./Documentation/TestingInIsolation.md)
+* [SOLID Principles - how to write better code](./Documentation/Solid.md)
 * [Logging Stories](./Documentation/LoggingStories.md)

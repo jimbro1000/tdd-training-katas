@@ -19,6 +19,7 @@
         <item name="Test Driven Design" ref="Documentation/AdvancedTDD.md"/>
         <item name="Logging Tests" ref="Documentation/LoggingStories.md"/>
         <item name="Mocking in Unit Tests" ref="Documentation/TestingInIsolation.md"/>
+        <item name="SOLID Principles" ref="Documentation/Solid.md"/>
         <item name="Kata 1 - Fizz Buzz" ref="katas/FizzBuzz/README.md"/>
         <item name="Kata 2 - String Calculator" ref="katas/StringCalculator/README.md"/>
         <item name="Kata 3 - Parking Bill" ref="katas/ParkingBill/README.md"/>
