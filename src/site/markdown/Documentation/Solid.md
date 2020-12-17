@@ -1,4 +1,4 @@
-# SOLID Principles for Object Oriented Software
+# SOLID Principles for Object-Oriented Software
 
 ## Introduction
 
@@ -7,7 +7,7 @@ SOLID principles as a means to make code easier to understand and extend, but it
 was Michael Feathers that introduced the SOLID acronym that has become popular
 as representing those principles.
 
-## Concepts
+## Concepts In Brief
 
 **Single Responsibility Principle** a class should have only a single
 responsibility
@@ -19,10 +19,9 @@ closed for modification
 with instances of their subtypes without altering the correctness of that
 program
 
-**Interface segregation principle** many client-specific interfaces are better
-than one general-purpose interface
+**Interface segregation principle** many client-specific interfaces are better than one general-purpose interface
 
-**Dependency inversion principle** one should depend upon abstractions, [not]
+**Dependency inversion principle** one should depend upon abstractions, **not**
 concretions
 
 ## Single Responsibility Principle
@@ -37,16 +36,15 @@ years since it was first postulated by Bertrand Meyer in the late 80s, the
 intent within SOLID is to ensure that a class can be extended by inheritance
 but should not be left open to modification. The basis is that once a functional
 set of operations is defined for a class it should not then be modified as this
-will result in major rework anywhere the class is used. Any class inheriting
-may extend the functionality without causing side-effects.
+will result in major rework anywhere the class is used. Any class inheriting may extend the functionality without
+causing side effects.
 
 ## Liskov Substitution Principle
 
 Prior to the establishment of the SOLID principles the open/closed principle
 had been used to popularise the use of abstracted interfaces but within SOLID
 this is covered by Liskov substitution whereby any class can be substituted by
-a subtype. This also permits classes implementing an interface to be similarly
-exchanged.
+a subtype. This also permits classes implementing an interface to be similarly exchanged.
 
 ## Interface Segregation Principle
 
@@ -56,6 +54,17 @@ separation of functional groups of interface definition.
 ## Dependency Inversion Principle
 
 Dependency inversion demands that the dependency between classes is abstracted through the use of interfaces.
+
+## Why SOLID?
+
+A fundamental part of writing better code is making sure it is easier to understand, not just as to what it does but
+also how to further develop the code for a new purpose or feature.
+
+With only a little experience it is not difficult to write code that achieves a simple goal - writing code that can
+survive complex requirements being added is another matter and this is where SOLID is so valuable. It isn't a magic
+bullet, and it can't solve all of your coding problems, but it goes a long, long way to easing the pain of having to
+completely redesign and rework code when those changes come along, or save hours of work hunting down all the code
+affected by an otherwise simple change.
 
 ## What Does This Have to do With TDD?
 
