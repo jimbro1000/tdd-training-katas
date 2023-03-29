@@ -30,7 +30,8 @@ The appointments in the list can appear in any order but never overlap.
 Given the appointment list the itinerary planner returns a list of transits to
 place the user in the right location for each physical appointment. The list is
 a comma-separated list of locations followed by the expected travel time in the
-format "location hh:mm".
+format "<origin location>-<destination location> Ddd hh:mm". The transits in the
+list are sorted in ascending chronological order.
 
 If the appointment list contains only teleconference meetings the travel list is
 an empty string.
