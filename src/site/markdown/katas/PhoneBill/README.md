@@ -48,7 +48,7 @@ The function should return 900 (the total duration for number 400-234-090 is
 
 Assume that:
   * N is an integer within the range [1..100];
-  * every phone number follows the format "hh:mm:ss" strictly
+  * every phone call duration follows the format "hh:mm:ss" strictly
   (00 <= hh <= 99, 00 <= mm, ss <= 59);
   * each line follows the format "hh:mm:ss,nnn-nnn-nnn" strictly; there are no
   empty lines and spaces.
